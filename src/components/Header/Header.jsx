@@ -22,7 +22,7 @@ const StyledTextbox = styled(Box)({
     fontFamily: "Roboto",
     fontWeight: "400",
     marginTop: "1.5rem",
-    color: colors.WHITE,
+    color: colors.OFF_WHITE,
     '@media `screen and (max-width: 1200px)': {
       marginTop:"10.5rem",
       fontSize:"5rem"
@@ -79,14 +79,14 @@ const Header = () => {
                 products.
               </Typography>
             </StyledTextbox>
-            <Stack direction={"row"} marginTop={"2.5rem"}>
+            <Stack direction={"row"} marginTop={["3.5rem","2.5rem"]}>
             <Button  variant="outlined" sx={{
                   color:colors.ORANGE,
                   borderColor:colors.ORANGE,
                   textTransform:"capitalize",
                   padding: ["1rem","0.5rem"],
               }}>
-                  show me more!
+                  I Want to know more!
                 </Button>
              
             </Stack>
