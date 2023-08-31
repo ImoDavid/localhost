@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { Link as RRLink, NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
 import { BsFillBugFill } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineDownload } from "react-icons/ai";
@@ -14,8 +13,6 @@ import {
   styled,
   Typography,
   Button,
-  useScrollTrigger,
-  Slide,
 } from "@mui/material";
 import { colors } from "../../styles/globals";
 //import LOGO from "../../assets/logo.jpg";
@@ -94,29 +91,6 @@ const MobileLink = styled(NavLink)({
   },
 });
 
-function HideOnScroll(props) {
-  const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-  });
-
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
-}
-HideOnScroll.propTypes = {
-  children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -125,7 +99,7 @@ const Navbar = () => {
       <AppBar
         position="sticky"
         sx={{
-          backgroundColor: "rgb(13, 28, 27)",
+          background: "rgba(13, 28, 27,0.9)",
           padding: "0rem",
           boxShadow: "none",
         }}
@@ -247,12 +221,11 @@ const Navbar = () => {
               backgroundColor={colors.MOBILENAV}
             >
               <Box
-                display={["block", "none"]}
-                fontSize={"1.5rem"}
+                Color={colors.ORANGE}
+                fontSize={"2.5rem"}
                 onClick={() => {
                   setNavbarOpen(!navbarOpen);
                 }}
-                color={colors.ORANGE}
                 sx={{
                   display: {
                     xs: "block",
