@@ -1,10 +1,14 @@
 import React from "react";
 import { Container, Stack, Typography, Box, styled } from "@mui/material";
 import { BsGit } from "react-icons/bs";
-import { FaBootstrap } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { BiLogoMongodb } from "react-icons/bi";
+import { FaBootstrap, FaReact, FaSass } from "react-icons/fa";
+import {
+  BiLogoMongodb,
+  BiLogoJavascript,
+  BiLogoTypescript,
+} from "react-icons/bi";
 import { FiFigma } from "react-icons/fi";
+import { AiOutlineAntDesign } from "react-icons/ai";
 
 import { colors } from "../../styles/globals";
 import { Heading } from "../typography/";
@@ -18,6 +22,20 @@ const StyledStack = styled(Box)({
   fontSize: ["1rem", "0.4rem"],
   marginBottom: ["0.2rem", "0.2rem"],
 });
+const boxItemsone = [
+  { id: "0.1", icon: <FaBootstrap />, stack: "Bootstrap" },
+  { id: "0.2", icon: <FaReact />, stack: "react.js" },
+  { id: "0.3", icon: <BsGit />, stack: "git" },
+  { id: "0.4", icon: <BiLogoMongodb />, stack: "Mongo db" },
+  { id: "0.5", icon: <FiFigma />, stack: "Figma" },
+];
+
+const boxItemstwo = [
+  { id: "0.1", icon: <BiLogoJavascript />, stack: "Javascript (Es6+)" },
+  { id: "0.2", icon: <AiOutlineAntDesign />, stack: "ant design" },
+  { id: "0.4", icon: <FaSass />, stack: "sass" },
+  { id: "0.3", icon: <BiLogoTypescript />, stack: "Typescript" },
+];
 
 const About = () => {
   return (
@@ -26,7 +44,7 @@ const About = () => {
         <Box
           minHeight={"100%"}
           paddingX={["1rem", "5rem"]}
-          marginTop={["6rem", "12rem"]}
+          marginTop={["0.8rem", "1rem"]}
           marginBottom={["1rem", "2rem"]}
         >
           <Box>
@@ -69,52 +87,25 @@ const About = () => {
                   Here are a few Technologies I work with:
                 </Typography>
                 <Stack direction={"row"}>
-                  <Box marginY={2}>
-                    <StyledStack>
-                      <Typography fontSize={"0.9rem"}>
-                        {" "}
-                        <span>
-                          <FaBootstrap />{" "}
-                        </span>{" "}
-                        bootstrap
-                      </Typography>
-                    </StyledStack>
-                    <StyledStack>
-                      <Typography fontSize={"0.9rem"}>
-                        {" "}
-                        <span>
-                          <FaReact />{" "}
-                        </span>{" "}
-                        React.js
-                      </Typography>
-                    </StyledStack>
-                    <StyledStack>
-                      <Typography fontSize={"0.9rem"}>
-                        {" "}
-                        <span>
-                          <BsGit />
-                        </span>{" "}
-                        git
-                      </Typography>
-                    </StyledStack>
-                    <StyledStack>
-                      <Typography fontSize={"0.9rem"}>
-                        {" "}
-                        <span>
-                          <BiLogoMongodb />{" "}
-                        </span>{" "}
-                        mongo db
-                      </Typography>
-                    </StyledStack>
-                    <StyledStack>
-                      <Typography fontSize={"0.9rem"}>
-                        {" "}
-                        <span>
-                          <FiFigma />{" "}
-                        </span>{" "}
-                        figma
-                      </Typography>
-                    </StyledStack>
+                  <Box marginY={3} mr={[6, 20]}>
+                    {boxItemsone.map((ele) => (
+                      <StyledStack key={ele.id}>
+                        <Typography fontSize={"0.9rem"}>
+                          {" "}
+                          <span>{ele.icon}</span> {ele.stack}
+                        </Typography>
+                      </StyledStack>
+                    ))}
+                  </Box>
+                  <Box marginY={3}>
+                    {boxItemstwo.map((ele) => (
+                      <StyledStack key={ele.id}>
+                        <Typography fontSize={"0.9rem"}>
+                          {" "}
+                          <span>{ele.icon}</span> {ele.stack}
+                        </Typography>
+                      </StyledStack>
+                    ))}
                   </Box>
                 </Stack>
               </Box>
@@ -143,33 +134,3 @@ const About = () => {
 
 export default About;
 
-// "Hello there! I'm [Your Name], a passionate frontend developer with a unique role as the Lead Developer at [NGO's Name].
-// With a keen eye for design and a knack for turning ideas into user - friendly digital experiences, I've been instrumental in driving the digital revolution of our NGO.
-
-// As a seasoned frontend developer, I've had the privilege of weaving creativity and functionality together to craft compelling web interfaces that resonate with our NGO's mission.
-//With[X] years of experience in the field, I have a proven track record of translating complex requirements into elegant,
-//responsive designs that enhance user engagement and elevate the online presence of our organization.
-
-// In my role as Lead Developer, I've embraced the challenge of spearheading our NGO's digital transformation journey.
-//By leveraging the latest web technologies and best practices, I've led a dynamic team in creating intuitive platforms that empower our supporters and stakeholders
-//to connect with our cause in meaningful ways.From optimizing user experiences to ensuring seamless interactions across devices, I'm committed to delivering digital solutions that leave a lasting impact.
-
-// Beyond the lines of code, I'm dedicated to understanding the unique needs of our NGO and aligning digital strategies with our overarching goals.
-//My passion for innovation fuels my desire to continuously learn and adapt, ensuring that our online presence remains at the forefront of the digital landscape.
-
-// When I'm not immersed in pixels and code, you can find me exploring the world of design, collaborating with fellow tech enthusiasts,
-//and seeking out opportunities to make a positive difference through technology.
-
-// Join me on this exciting journey as we harness the power of technology to further the mission of[NGO's Name] and create a brighter digital future for our cause."
-
-// Hello, I'm [Your Name], a frontend developer with a passion for crafting engaging digital experiences. Currently leading development efforts,
-// I'm focused on leveraging my skills to push boundaries and create innovative solutions. With [X] years in the field, I've honed the art of translating complex ideas into user - friendly designs.
-
-// As a Lead Developer, I'm committed to staying at the forefront of technology trends, ensuring that our online platforms are modern,
-//responsive, and intuitive.My dedication to seamless user interactions and a keen eye for design aesthetics drive my work.I thrive on collaborating
-//with talented teams and love to explore creative solutions that leave a lasting impact.
-
-// Beyond coding, I'm an avid design enthusiast, always seeking fresh inspiration to infuse into my projects.
-//I'm excited by the possibilities that technology offers and how it can shape the way we connect and engage in the digital age.
-
-// Join me as I continue to explore the exciting intersection of design and technology, pushing for innovative solutions and enhancing digital experiences.

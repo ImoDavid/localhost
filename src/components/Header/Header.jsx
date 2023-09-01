@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <>
       <Container maxwidth="md">
-        <Box minHeight={"100vh"} paddingX={["1rem", "2rem"]}>
+        <Box minHeight={["80vh", "100vh"]} paddingX={["1rem", "2rem"]}>
           <Stack direction={"column"} marginTop={"5rem"}>
             <Typography
               variant="h1"
