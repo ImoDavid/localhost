@@ -9,7 +9,6 @@ import {
 } from "react-icons/bi";
 import { FiFigma } from "react-icons/fi";
 import { AiOutlineAntDesign } from "react-icons/ai";
-
 import { colors } from "../../styles/globals";
 import { Heading } from "../typography/";
 import testfile from "../../assets/testfile.jpeg";
@@ -133,4 +132,3 @@ const About = () => {
 };
 
 export default About;
-

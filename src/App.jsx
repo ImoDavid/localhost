@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Header } from "./components/Header";
 import { Loader } from "./components/Loader";
 import { About } from "./components/About";
+import { Experience } from "./components/Experience";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ function App() {
         <Navbar />
         <Header />
         <About />
+        <Experience/>
       </>
     );
   }

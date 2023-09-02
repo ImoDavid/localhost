@@ -21,6 +21,7 @@ const Heading = ({ number, title }) => {
           fontSize={["1rem", "1.3rem"]}
           color={colors.OFF_WHITE}
           letterSpacing={"2px"}
+          textTransform={"capitalize"}
         >
           {title}
         </Typography>
