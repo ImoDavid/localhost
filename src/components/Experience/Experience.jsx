@@ -43,7 +43,7 @@ const StyledWorkicon = styled(Typography)({
 const StyledWorktext = styled(Typography)({
   color: colors.OFF_WHITE,
   marginLeft: "0.5rem",
-  paddingRight: ["10rem", "1rem"],
+  paddingRight: ["10rem", "0.7rem"],
   fontSize: "0.9rem",
 });
 
@@ -55,152 +55,158 @@ const Experience = () => {
   return (
     <>
       <Container maxwidth="md">
-        <Box
-          minHeight={"100%"}
-          paddingX={["10rem", "12rem"]}
-          marginTop={["3.5rem", "10rem"]}
-          marginBottom={["1rem", "2rem"]}
+        <Stack
+          justifyContent={["center", "start"]}
+          alignItems={["center", "stretch"]}
         >
-          <Box>
-            <Heading number={"02."} title={"working experience"} />
-          </Box>
-          <Box>
-            <Stack direction={"row"} paddingY={2}>
-              <Box
-                borderBottom={
-                  nutrilife
-                    ? `2px solid ${colors.ORANGE}`
-                    : `2px solid ${colors.OFF_WHITE}`
-                }
-              >
-                <NameButton
-                  onClick={() => {
-                    setNutrilife(true);
-                    setShona(false);
-                    setFreelance(false);
-                  }}
-                >
-                  nutrilife
-                </NameButton>
-              </Box>
-              <Box
-                borderBottom={
-                  shona
-                    ? `2px solid ${colors.ORANGE}`
-                    : `2px solid ${colors.OFF_WHITE}`
-                }
-              >
-                <NameButton
-                  onClick={() => {
-                    setShona(true);
-                    setNutrilife(false);
-                    setFreelance(false);
-                  }}
-                >
-                  shona{" "}
-                </NameButton>
-              </Box>
-              <Box
-                borderBottom={
-                  freelance
-                    ? `2px solid ${colors.ORANGE}`
-                    : `2px solid ${colors.OFF_WHITE}`
-                }
-              >
-                <NameButton
-                  onClick={() => {
-                    setFreelance(true);
-                    setNutrilife(false);
-                    setShona(false);
-                  }}
-                >
-                  freelance
-                </NameButton>
-              </Box>
-            </Stack>
+          <Box
+            minHeight={"100%"}
+            paddingX={["1rem", "12rem"]}
+            marginTop={["13.5rem", "10rem"]}
+            marginBottom={["1rem", "2rem"]}
+            marginX={["8rem", "0rem"]}
+          >
             <Box>
-              {nutrilife && (
-                <>
-                  <Box>
-                    <Box mb={2}>
-                      <StyledWorkrole>
-                        lead developer{" "}
-                        <span style={{ color: "orange" }}>@Nutrilife</span>
-                      </StyledWorkrole>
-                      <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
-                    </Box>
-                    <Box></Box>
-                  </Box>
-                </>
-              )}
-              {shona && (
-                <>
-                  <Box>
-                    <Box mb={2}>
-                      <StyledWorkrole>
-                        lead developer{" "}
-                        <span style={{ color: "orange" }}>@shona</span>
-                      </StyledWorkrole>
-                      <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
-                    </Box>
+              <Heading number={"02."} title={"working experience"} />
+            </Box>
+            <Box>
+              <Stack direction={"row"} paddingY={2}>
+                <Box
+                  borderBottom={
+                    nutrilife
+                      ? `2px solid ${colors.ORANGE}`
+                      : `2px solid ${colors.OFF_WHITE}`
+                  }
+                >
+                  <NameButton
+                    onClick={() => {
+                      setNutrilife(true);
+                      setShona(false);
+                      setFreelance(false);
+                    }}
+                  >
+                    nutrilife
+                  </NameButton>
+                </Box>
+                <Box
+                  borderBottom={
+                    shona
+                      ? `2px solid ${colors.ORANGE}`
+                      : `2px solid ${colors.OFF_WHITE}`
+                  }
+                >
+                  <NameButton
+                    onClick={() => {
+                      setShona(true);
+                      setNutrilife(false);
+                      setFreelance(false);
+                    }}
+                  >
+                    shona{" "}
+                  </NameButton>
+                </Box>
+                <Box
+                  borderBottom={
+                    freelance
+                      ? `2px solid ${colors.ORANGE}`
+                      : `2px solid ${colors.OFF_WHITE}`
+                  }
+                >
+                  <NameButton
+                    onClick={() => {
+                      setFreelance(true);
+                      setNutrilife(false);
+                      setShona(false);
+                    }}
+                  >
+                    freelance
+                  </NameButton>
+                </Box>
+              </Stack>
+              <Box>
+                {nutrilife && (
+                  <>
                     <Box>
-                      <Stack direction={"row"}>
-                        <StyledWorkicon>
-                          <BiSolidRightArrow />
-                        </StyledWorkicon>
-                        <StyledWorktext>
-                          Write modern, performant, maintainable code for a
-                          diverse array of client and internal projects
-                        </StyledWorktext>
-                      </Stack>
-                      <Stack direction={"row"}>
-                        <StyledWorkicon>
-                          <BiSolidRightArrow />
-                        </StyledWorkicon>
-                        <StyledWorktext>
-                          Write modern, performant, maintainable code for a
-                          diverse array of client and internal projects
-                        </StyledWorktext>
-                      </Stack>
-                      <Stack direction={"row"}>
-                        <StyledWorkicon>
-                          <BiSolidRightArrow />
-                        </StyledWorkicon>
-                        <StyledWorktext>
-                          Write modern, performant, maintainable code for a
-                          diverse array of client and internal projects
-                        </StyledWorktext>
-                      </Stack>
-                      <Stack direction={"row"}>
-                        <StyledWorkicon>
-                          <BiSolidRightArrow />
-                        </StyledWorkicon>
-                        <StyledWorktext>
-                          Write modern, performant, maintainable code for a
-                          diverse array of client and internal projects
-                        </StyledWorktext>
-                      </Stack>
+                      <Box mb={2}>
+                        <StyledWorkrole>
+                          lead developer{" "}
+                          <span style={{ color: "orange" }}>@Nutrilife</span>
+                        </StyledWorkrole>
+                        <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
+                      </Box>
+                      <Box></Box>
                     </Box>
-                  </Box>
-                </>
-              )}
-              {freelance && (
-                <>
-                  <Box>
-                    <Box mb={2}>
-                      <StyledWorkrole>
-                        lead developer{" "}
-                        <span style={{ color: "orange" }}>@upwork</span>
-                      </StyledWorkrole>
-                      <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
+                  </>
+                )}
+                {shona && (
+                  <>
+                    <Box>
+                      <Box mb={2}>
+                        <StyledWorkrole>
+                          lead developer{" "}
+                          <span style={{ color: "orange" }}>@shona</span>
+                        </StyledWorkrole>
+                        <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
+                      </Box>
+                      <Box>
+                        <Stack direction={"row"}>
+                          <StyledWorkicon>
+                            <BiSolidRightArrow />
+                          </StyledWorkicon>
+                          <StyledWorktext>
+                            Write modern, performant, maintainable code for a
+                            diverse array of client and internal projects
+                          </StyledWorktext>
+                        </Stack>
+                        <Stack direction={"row"}>
+                          <StyledWorkicon>
+                            <BiSolidRightArrow />
+                          </StyledWorkicon>
+                          <StyledWorktext>
+                            Write modern, performant, maintainable code for a
+                            diverse array of client and internal projects
+                          </StyledWorktext>
+                        </Stack>
+                        <Stack direction={"row"}>
+                          <StyledWorkicon>
+                            <BiSolidRightArrow />
+                          </StyledWorkicon>
+                          <StyledWorktext>
+                            Write modern, performant, maintainable code for a
+                            diverse array of client and internal projects
+                          </StyledWorktext>
+                        </Stack>
+                        <Stack direction={"row"}>
+                          <StyledWorkicon>
+                            <BiSolidRightArrow />
+                          </StyledWorkicon>
+                          <StyledWorktext>
+                            Write modern, performant, maintainable code for a
+                            diverse array of client and internal projects
+                          </StyledWorktext>
+                        </Stack>
+                      </Box>
                     </Box>
-                    <Box></Box>
-                  </Box>
-                </>
-              )}
+                  </>
+                )}
+                {freelance && (
+                  <>
+                    <Box>
+                      <Box mb={2}>
+                        <StyledWorkrole>
+                          lead developer{" "}
+                          <span style={{ color: "orange" }}>@upwork</span>
+                        </StyledWorkrole>
+                        <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
+                      </Box>
+                      <Box></Box>
+                    </Box>
+                  </>
+                )}
+              </Box>
             </Box>
           </Box>
-        </Box>
+        </Stack>
       </Container>
     </>
   );
