@@ -54,11 +54,11 @@ const Experience = () => {
 
   return (
     <>
-      <Container maxwidth="sm">
+      <Container maxwidth="md">
         <Box
           minHeight={"100%"}
-          paddingX={["5rem", "12rem"]}
-          marginTop={["4.5rem", "10rem"]}
+          paddingX={["10rem", "12rem"]}
+          marginTop={["3.5rem", "10rem"]}
           marginBottom={["1rem", "2rem"]}
         >
           <Box>
