@@ -44,7 +44,7 @@ const StyledWorktext = styled(Typography)({
   color: colors.OFF_WHITE,
   marginLeft: "0.5rem",
   paddingRight: ["10rem", "0.7rem"],
-  fontSize: "0.9rem",
+  fontSize: ["0.6rem", "0.9rem"],
 });
 
 const Experience = () => {
@@ -64,10 +64,14 @@ const Experience = () => {
             paddingX={["1rem", "12rem"]}
             marginTop={["13.5rem", "10rem"]}
             marginBottom={["1rem", "2rem"]}
-            marginX={["8rem", "0rem"]}
+            marginX={["6.5rem", "0rem"]}
           >
             <Box>
-              <Heading number={"02."} title={"working experience"} />
+              <Heading
+                number={"02."}
+                title={"working experience"}
+                divWidth="50px"
+              />
             </Box>
             <Box>
               <Stack direction={"row"} paddingY={2}>
