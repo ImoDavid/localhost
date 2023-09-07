@@ -78,7 +78,7 @@ const About = () => {
               </Typography>
               <Box marginTop={"2rem"}>
                 <Typography
-                  variant="p"
+                  variant={"p"}
                   fontSize={["1rem", "0.9rem"]}
                   color={colors.OFF_WHITE}
                   fontWeight={900}

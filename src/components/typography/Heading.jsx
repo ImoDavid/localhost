@@ -1,14 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-import { Stack, Typography, Divider } from "@mui/material";
+import { Stack, Typography, Divider, Box } from "@mui/material";
 import { colors } from "../../styles/globals";
 
-const Heading = ({ number, title, divWidth="100px" }) => {
+const Heading = ({ number, title }) => {
   return (
     <>
       <Stack direction={"row"} justifyContent={"start"} alignItems={"center"}>
         <Typography
           variant="h1"
-          fontSize={["0.9rem","1.3rem"]}
+          fontSize={["0.9rem", "1.3rem"]}
           fontWeight={"500"}
           color={colors.ORANGE}
           mr={"0.5rem"}
@@ -25,11 +26,15 @@ const Heading = ({ number, title, divWidth="100px" }) => {
         >
           {title}
         </Typography>
-        <Divider
-          sx={{ height: ".1rem", marginLeft: ".5rem" }}
-          color={colors.ORANGE}
-          width={[divWidth, "200px"]}
-        />
+        <Box variant="span" width={["100px", "200px"]}>
+          <Divider
+            sx={{
+              height: ".1rem",
+              marginLeft: ".5rem",
+            }}
+            color={colors.ORANGE}
+          />
+        </Box>
       </Stack>
     </>
   );

@@ -43,8 +43,16 @@ const StyledWorkicon = styled(Typography)({
 const StyledWorktext = styled(Typography)({
   color: colors.OFF_WHITE,
   marginLeft: "0.5rem",
-  paddingRight: ["10rem", "0.7rem"],
   fontSize: ["0.6rem", "0.9rem"],
+});
+const StyledRowbox = styled(Box)({
+  display: "flex",
+  flexDirection: "row",
+  marginBottom: "1rem",
+
+  "@media screen and (max-width: 1200px)": {
+    marginBottom: "1rem",
+  },
 });
 
 const Experience = () => {
@@ -54,7 +62,7 @@ const Experience = () => {
 
   return (
     <>
-      <Container maxwidth="md">
+      <Container maxwidth={["lg", "md"]}>
         <Stack
           justifyContent={["center", "start"]}
           alignItems={["center", "stretch"]}
@@ -67,11 +75,7 @@ const Experience = () => {
             marginX={["4.5rem", "0rem"]}
           >
             <Box>
-              <Heading
-                number={"02."}
-                title={"working experience"}
-                divWidth="50px"
-              />
+              <Heading number={"02."} title={"working experience"} />
             </Box>
             <Box>
               <Stack direction={"row"} paddingY={2}>
@@ -147,48 +151,52 @@ const Experience = () => {
                     <Box>
                       <Box mb={2}>
                         <StyledWorkrole>
-                          lead developer{" "}
-                          <span style={{ color: "orange" }}>@shona</span>
+                          frontend developer{" "}
+                          <span style={{ color: "orange" }}>@shona</span>{" "}
+                          (Remote)
                         </StyledWorkrole>
-                        <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
+                        <StyledWorkdate> march 2022 - Jan 2023</StyledWorkdate>
                       </Box>
                       <Box>
-                        <Stack direction={"row"}>
+                        <StyledRowbox>
                           <StyledWorkicon>
                             <BiSolidRightArrow />
                           </StyledWorkicon>
                           <StyledWorktext>
-                            Write modern, performant, maintainable code for a
-                            diverse array of client and internal projects
+                            Developed a website with Reactjs for internal team
+                            use; developed product, cart and product tracking
+                            pages.
                           </StyledWorktext>
-                        </Stack>
-                        <Stack direction={"row"}>
+                        </StyledRowbox>
+                        <StyledRowbox>
                           <StyledWorkicon>
                             <BiSolidRightArrow />
                           </StyledWorkicon>
                           <StyledWorktext>
-                            Write modern, performant, maintainable code for a
-                            diverse array of client and internal projects
+                            Made resuable components and implemented features
+                            like filter, sort etc while also consuming RESTful
+                            API.
                           </StyledWorktext>
-                        </Stack>
-                        <Stack direction={"row"}>
+                        </StyledRowbox>
+                        <StyledRowbox>
                           <StyledWorkicon>
                             <BiSolidRightArrow />
                           </StyledWorkicon>
                           <StyledWorktext>
-                            Write modern, performant, maintainable code for a
-                            diverse array of client and internal projects
+                            Functioned within a multi-disciplinary teams of
+                            Engineers,Designers,Product managers on a daily
+                            basis.
                           </StyledWorktext>
-                        </Stack>
-                        <Stack direction={"row"}>
+                        </StyledRowbox>
+                        <StyledRowbox>
                           <StyledWorkicon>
                             <BiSolidRightArrow />
                           </StyledWorkicon>
                           <StyledWorktext>
-                            Write modern, performant, maintainable code for a
-                            diverse array of client and internal projects
+                            Worked with team management platforms like
+                            Rally,Github.
                           </StyledWorktext>
-                        </Stack>
+                        </StyledRowbox>
                       </Box>
                     </Box>
                   </>
@@ -198,12 +206,41 @@ const Experience = () => {
                     <Box>
                       <Box mb={2}>
                         <StyledWorkrole>
-                          lead developer{" "}
+                          web developer{" "}
                           <span style={{ color: "orange" }}>@upwork</span>
                         </StyledWorkrole>
-                        <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
+                        <StyledWorkdate> June 2021 - present</StyledWorkdate>
                       </Box>
-                      <Box></Box>
+                      <Box>
+                        <StyledRowbox>
+                          <StyledWorkicon>
+                            <BiSolidRightArrow />
+                          </StyledWorkicon>
+                          <StyledWorktext>
+                            Developed the frontend of a large scale E-commerce
+                            website using reactJs and styled components.
+                          </StyledWorktext>
+                        </StyledRowbox>
+                        <StyledRowbox>
+                          <StyledWorkicon>
+                            <BiSolidRightArrow />
+                          </StyledWorkicon>
+                          <StyledWorktext>
+                            Work with tecnologies like HTML, CSS, vanilla JS to
+                            transform UI mockups to scalable high performance
+                            websites and web applications.
+                          </StyledWorktext>
+                        </StyledRowbox>
+                        <StyledRowbox>
+                          <StyledWorkicon>
+                            <BiSolidRightArrow />
+                          </StyledWorkicon>
+                          <StyledWorktext>
+                            Create well functioning static/ dynamic websites for
+                            clients.
+                          </StyledWorktext>
+                        </StyledRowbox>
+                      </Box>
                     </Box>
                   </>
                 )}
