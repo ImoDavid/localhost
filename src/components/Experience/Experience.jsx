@@ -72,7 +72,6 @@ const Experience = () => {
             paddingX={["1rem", "12rem"]}
             marginTop={["13.5rem", "10rem"]}
             marginBottom={["1rem", "2rem"]}
-            marginX={["4.5rem", "0rem"]}
           >
             <Box>
               <Heading number={"02."} title={"working experience"} />
