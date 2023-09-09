@@ -30,9 +30,8 @@ const StyledTextbox = styled(Box)({
   fontWeight: "400",
   marginTop: "1.5rem",
   color: colors.OFF_WHITE,
-  "@media `screen and (max-width: 1200px)": {
-    marginTop: "10.5rem",
-    fontSize: "5rem",
+  "@media screen and (max-width: 1200px)": {
+    fontWeight: "300",
   },
 });
 
@@ -56,7 +55,7 @@ const Header = () => {
               fontFamily={"Roboto"}
               fontWeight={"700"}
               marginTop={"1rem"}
-              fontSize={["4rem", "8rem"]}
+              fontSize={["3rem", "8rem"]}
               color={colors.OFF_WHITE}
             >
               Imo David.

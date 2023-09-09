@@ -3,17 +3,9 @@ import React, { useState } from "react";
 import { Link as RRLink, NavLink } from "react-router-dom";
 import { BsFillBugFill } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineDownload } from "react-icons/ai";
-import { GrFormClose } from "react-icons/gr";
+import { AiOutlineDownload, AiOutlineClose } from "react-icons/ai";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import {
-  AppBar,
-  Box,
-  Stack,
-  styled,
-  Typography,
-  Button,
-} from "@mui/material";
+import { AppBar, Box, Stack, styled, Typography, Button } from "@mui/material";
 import { colors } from "../../styles/globals";
 //import LOGO from "../../assets/logo.jpg";
 
@@ -80,17 +72,17 @@ const MobileLink = styled(NavLink)({
   fontWeight: 700,
   fontSize: "16px",
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
 
   "&:last-child": {
     marginBottom: 0,
   },
   "&:hover": {
     color: colors.ORANGE,
-    textDecoration: "underline",
   },
 });
-
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -211,7 +203,12 @@ const Navbar = () => {
           </Stack>
         </Box>
         {navbarOpen && (
-          <StyledMobileContainer boxShadow={2}>
+          <StyledMobileContainer
+            boxShadow={2}
+            onClick={() => {
+              setNavbarOpen(!navbarOpen);
+            }}
+          >
             <Stack
               direction={"column"}
               alignItems={"center"}
@@ -221,8 +218,9 @@ const Navbar = () => {
               backgroundColor={colors.MOBILENAV}
             >
               <Box
-                Color={colors.ORANGE}
-                fontSize={"2.5rem"}
+                fontSize={"2rem"}
+                color={colors.ORANGE}
+                mb={1}
                 onClick={() => {
                   setNavbarOpen(!navbarOpen);
                 }}
@@ -235,11 +233,10 @@ const Navbar = () => {
                     xl: "none",
                   },
                   position: "absolute",
-                  right: "0",
-                  marginRight: "1rem",
+                  right: "10px",
                 }}
               >
-                <GrFormClose />
+                <AiOutlineClose />
               </Box>
               {navLinks.map((ele) => (
                 <MobileLink
@@ -254,7 +251,7 @@ const Navbar = () => {
                   <Typography color={colors.ORANGE} fontSize={"0.7rem"}>
                     {ele.no}
                   </Typography>
-                  {ele.page}
+                  <Typography>{ele.page}</Typography>
                 </MobileLink>
               ))}
               <Button

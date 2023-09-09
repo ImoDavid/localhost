@@ -3,7 +3,7 @@ import React from "react";
 import { Stack, Typography, Divider, Box } from "@mui/material";
 import { colors } from "../../styles/globals";
 
-const Heading = ({ number, title }) => {
+const Heading = ({ number, title, width = ["80px", "300px"] }) => {
   return (
     <>
       <Stack direction={"row"} justifyContent={"start"} alignItems={"center"}>
@@ -21,15 +21,14 @@ const Heading = ({ number, title }) => {
           fontWeight={"900"}
           fontSize={["1rem", "1.3rem"]}
           color={colors.OFF_WHITE}
-          letterSpacing={"2px"}
+          letterSpacing={["0px", "2px"]}
           textTransform={"capitalize"}
         >
           {title}
         </Typography>
-        <Box variant="span" width={["100px", "200px"]}>
+        <Box width={width}>
           <Divider
             sx={{
-              height: ".1rem",
               marginLeft: ".5rem",
             }}
             color={colors.ORANGE}

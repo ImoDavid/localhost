@@ -21,6 +21,17 @@ const StyledStack = styled(Box)({
   fontSize: ["1rem", "0.4rem"],
   marginBottom: ["0.2rem", "0.2rem"],
 });
+
+const StyledAbouttext = styled(Typography)({
+  color: colors.OFF_WHITE,
+  fontWeight: "400",
+  fontSize: "1rem",
+  "@media screen and (max-width: 1200px)": {
+    fontWeight: "300",
+    fontSize: "0.9rem",
+  },
+});
+
 const boxItemsone = [
   { id: "0.1", icon: <FaBootstrap />, stack: "Bootstrap" },
   { id: "0.2", icon: <FaReact />, stack: "react.js" },
@@ -51,37 +62,27 @@ const About = () => {
           </Box>
           <Stack direction={["column", "row"]}>
             <Box width={["100%", "65%"]} paddingY={"1.5rem"}>
-              <Typography
-                variant="p"
-                fontSize={["1rem", "0.9rem"]}
-                color={colors.OFF_WHITE}
-              >
+              <StyledAbouttext>
                 I'm a frontend developer with over four years experience and a
                 proven track record of translating complex requirements into
                 elegant, responsive websites by weaving creativity and
                 functionality together to craft compelling web interfaces that
                 resonate with clients ideas.
-              </Typography>
+              </StyledAbouttext>
 
-              <Typography
-                variant="p"
-                fontSize={["1rem", "1rem"]}
-                color={colors.OFF_WHITE}
-                display={"block"}
-                marginY={"1rem"}
-              >
+              <StyledAbouttext display={"block"} marginY={"1rem"}>
                 Currently the Lead Developer for an NGO{" "}
                 <span style={{ color: "orange" }}>Nutrilife </span> where i've
                 embraced the challenge of spearheading our NGO's digital
                 transformation journey by leveraging the latest web technologies
                 and best practices.
-              </Typography>
+              </StyledAbouttext>
               <Box marginTop={"2rem"}>
                 <Typography
                   variant={"p"}
                   fontSize={["1rem", "0.9rem"]}
                   color={colors.OFF_WHITE}
-                  fontWeight={900}
+                  fontWeight={500}
                 >
                   Here are a few Technologies I work with:
                 </Typography>
@@ -111,7 +112,6 @@ const About = () => {
             </Box>
             <Box
               width={["100%", "35%"]}
-              padding={"1.5rem"}
               display={"flex"}
               justifyContent={"center"}
               alignItems={"center"}
