@@ -80,9 +80,8 @@ const Header = () => {
             </StyledTypebox>
             <StyledTextbox paddingRight={["1.5rem", "21rem"]}>
               <Typography variant="p" fontSize={["1rem", "1rem"]}>
-                I’m a{" "}
                 <span style={{ color: "orange" }}>Frontend Web Developer</span>{" "}
-                specializing in building exceptional digital experiences. I am
+                specialized in building exceptional digital experiences. I am
                 an Engineer valued for driving high-performance accessible web
                 experiences. I develop fast, quality, user-friendly and scalable
                 products.

@@ -5,6 +5,8 @@ import { Header } from "./components/Header";
 import { Loader } from "./components/Loader";
 import { About } from "./components/About";
 import { Experience } from "./components/Experience";
+import { Projects } from "./components/Projects";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,7 +27,9 @@ function App() {
         <Navbar />
         <Header />
         <About />
-        <Experience/>
+        <Experience />
+        <Projects />
+        <Footer />
       </>
     );
   }
