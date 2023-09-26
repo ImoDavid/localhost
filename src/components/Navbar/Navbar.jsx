@@ -7,6 +7,7 @@ import { AiOutlineDownload, AiOutlineClose } from "react-icons/ai";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { AppBar, Box, Stack, styled, Typography, Button } from "@mui/material";
 import { colors } from "../../styles/globals";
+import { motion } from "framer-motion";
 //import LOGO from "../../assets/logo.jpg";
 
 const navLinks = [
@@ -166,6 +167,11 @@ const Navbar = () => {
                   ))}
                   <Button
                     variant="outlined"
+                    component={motion.div}
+                    whileHover={{
+                      scale: 1.02,
+                      transition: { duration: 0.3 },
+                    }}
                     endIcon={<AiOutlineDownload />}
                     sx={{
                       color: colors.ORANGE,

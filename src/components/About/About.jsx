@@ -12,6 +12,7 @@ import { AiOutlineAntDesign } from "react-icons/ai";
 import { colors } from "../../styles/globals";
 import { Heading } from "../typography/";
 import testfile from "../../assets/testfile.jpeg";
+import { motion } from "framer-motion";
 
 const StyledStack = styled(Box)({
   display: "flex",
@@ -50,7 +51,13 @@ const boxItemstwo = [
 const About = () => {
   return (
     <>
-      <Container maxwidth="md">
+      <Container
+        maxwidth="md"
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+      >
         <Box
           minHeight={"100%"}
           paddingX={["1rem", "5rem"]}

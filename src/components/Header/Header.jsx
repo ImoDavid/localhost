@@ -10,6 +10,7 @@ import {
   Button,
 } from "@mui/material";
 import { colors } from "../../styles/globals";
+import { motion } from "framer-motion";
 
 const StyledTypebox = styled(Box)({
   fontSize: "2rem",
@@ -81,8 +82,8 @@ const Header = () => {
             <StyledTextbox paddingRight={["1.5rem", "21rem"]}>
               <Typography variant="p" fontSize={["1rem", "1rem"]}>
                 <span style={{ color: "orange" }}>Frontend Web Developer</span>{" "}
-                specialized in building exceptional digital experiences. I am
-                an Engineer valued for driving high-performance accessible web
+                specialized in building exceptional digital experiences. I am an
+                Engineer valued for driving high-performance accessible web
                 experiences. I develop fast, quality, user-friendly and scalable
                 products.
               </Typography>

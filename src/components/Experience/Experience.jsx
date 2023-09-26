@@ -10,6 +10,7 @@ import {
 import { BiSolidRightArrow } from "react-icons/bi";
 import { colors } from "../../styles/globals";
 import { Heading } from "../typography/";
+import { motion } from "framer-motion";
 
 const NameButton = styled(Button)({
   color: colors.OFF_WHITE,
@@ -63,7 +64,13 @@ const Experience = () => {
 
   return (
     <>
-      <Container maxwidth="md">
+      <Container
+        maxwidth="md"
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+      >
         <Box
           minHeight={"100%"}
           paddingX={["2.2rem", "10rem"]}

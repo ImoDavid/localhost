@@ -5,6 +5,7 @@ import { BiFolder } from "react-icons/bi";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { Heading } from "../typography";
 import { Project } from "../../commons/project";
+import { motion } from "framer-motion";
 
 const StyledLinkBox = styled(Box)({
   color: colors.FOOTER_TEXT,
@@ -23,7 +24,7 @@ const OtherProjects = [
   {
     index: "1",
     title: "home",
-    Glink:"https://react-icons.github.io/react-icons",
+    Glink: "https://react-icons.github.io/react-icons",
     text: "jdshcjsjhksjd sdjkfhjasdjfhdgfhdgfhdg hdfgsdhgfhgasjfjsdsfj jhdfvhgh",
   },
   {
@@ -41,7 +42,13 @@ const OtherProjects = [
 const Projects = () => {
   return (
     <>
-      <Container maxwidth="md">
+      <Container
+        maxwidth="md"
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+      >
         <Box
           minHeight={"100%"}
           paddingX={["1rem", "5rem"]}
@@ -85,14 +92,19 @@ const Projects = () => {
             />
           </Box>
         </Box>
-        <Box>
+        <Box
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+        >
           <Box textAlign={"center"} color={colors.FOOTER_TEXT} mt={10}>
             <Typography fontSize={"1.7rem"} fontWeight={400}>
               Other Noteworthy projects{" "}
             </Typography>
           </Box>
 
-          <Stack mt={7} mb={7} direction={"row"} flexWrap={"wrap"} ml={[0,5]}>
+          <Stack mt={7} mb={7} direction={"row"} flexWrap={"wrap"} ml={[0, 5]}>
             {OtherProjects.map((ele) => (
               <Box
                 width={"280px"}
@@ -102,6 +114,10 @@ const Projects = () => {
                 padding={3}
                 key={ele.index}
                 borderRadius={"10px"}
+                component={motion.div}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
               >
                 <Stack
                   direction={"row"}

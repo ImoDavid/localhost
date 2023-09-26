@@ -2,6 +2,7 @@ import React from "react";
 import { Stack, Box, styled, Typography, Link } from "@mui/material";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { colors } from "../../styles/globals";
+import { motion } from "framer-motion";
 
 const StyledAboutBox = styled(Box)({
   borderRadius: "25px",
@@ -41,7 +42,15 @@ const Project = ({
 }) => {
   return (
     <>
-      <Stack direction={["column", "row"]} paddingY={2} marginBottom={"2rem"}>
+      <Stack
+        direction={["column", "row"]}
+        paddingY={2}
+        marginBottom={"2rem"}
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+      >
         <Box
           width={["100%", "600px"]}
           marginY={"1rem"}
@@ -55,7 +64,7 @@ const Project = ({
               alignItems={"center"}
               justifyContent={"space-between"}
             >
-              <Typography  variant="h5" fontSize={"1.8rem"}>
+              <Typography variant="h5" fontSize={"1.8rem"}>
                 {title}
               </Typography>
               <Stack direction={"row"} justifyContent={justify}>
@@ -81,6 +90,12 @@ const Project = ({
           </StyledTextBox>
         </Box>
         <StyledAboutBox
+          component={motion.div}
+          whileHover={{
+            scale: [1.0, 1.05],
+            transition: { type: "spring", duration: 0.3 },
+            
+          }}
           sx={{
             order: ["1", orderPic],
             background: `url(${image})`,
