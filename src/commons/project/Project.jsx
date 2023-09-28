@@ -14,16 +14,13 @@ const StyledTextBox = styled(Box)({
   lineHeight: "1rem",
   color: colors.OFF_WHITE,
   "@media screen and (max-width: 1200px)": {
-    // display: "flex",
-    // flexDirection: "column",
-    // alignItems: "center",
-    // justifyContent: "center",
+    
   },
 });
 
 const StyledLinkBox = styled(Box)({
   color: colors.FOOTER_TEXT,
-  marginRight: "1rem",
+
   "& : hover": {
     color: colors.ORANGE,
   },
@@ -63,12 +60,13 @@ const Project = ({
               direction={"row"}
               alignItems={"center"}
               justifyContent={"space-between"}
+              mb={[1.5]}
             >
               <Typography variant="h5" fontSize={"1.8rem"}>
                 {title}
               </Typography>
               <Stack direction={"row"} justifyContent={justify}>
-                <StyledLinkBox>
+                <StyledLinkBox mr={2}>
                   <Link href={mail} color={colors.FOOTER_TEXT}>
                     {<FiGithub size={"1.5rem"} />}
                   </Link>
@@ -87,6 +85,10 @@ const Project = ({
               the of readable content of a page when lookings at its layouts the
               points of using that it has a more-or-less normal.
             </Typography>
+            <Typography fontSize={"0.8rem"}>
+              {" "}
+              Stack: html,css,material UI, Reactjs, swiperJs
+            </Typography>
           </StyledTextBox>
         </Box>
         <StyledAboutBox
@@ -94,7 +96,6 @@ const Project = ({
           whileHover={{
             scale: [1.0, 1.05],
             transition: { type: "spring", duration: 0.3 },
-            
           }}
           sx={{
             order: ["1", orderPic],

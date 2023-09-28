@@ -2,13 +2,14 @@
 import React, { useState } from "react";
 import { Link as RRLink, NavLink } from "react-router-dom";
 import { BsFillBugFill } from "react-icons/bs";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RiMenu3Fill } from "react-icons/ri";
 import { AiOutlineDownload, AiOutlineClose } from "react-icons/ai";
+
+RiMenu3Fill;
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { AppBar, Box, Stack, styled, Typography, Button } from "@mui/material";
 import { colors } from "../../styles/globals";
 import { motion } from "framer-motion";
-//import LOGO from "../../assets/logo.jpg";
 
 const navLinks = [
   { page: "home", url: "/", no: "01." },
@@ -29,6 +30,10 @@ const theme = createTheme({
     },
   },
 });
+const variants = {
+  open: { opacity: 1, x: 0 },
+  closed: { opacity: 0, x: "-100%" },
+};
 
 const StyledNavLink = styled(Box)({
   display: "flex",
@@ -203,78 +208,80 @@ const Navbar = () => {
                   },
                 }}
               >
-                <RxHamburgerMenu />
+                <RiMenu3Fill />
               </Box>
             </Box>
           </Stack>
         </Box>
-        {navbarOpen && (
-          <StyledMobileContainer
-            boxShadow={2}
-            onClick={() => {
-              setNavbarOpen(!navbarOpen);
-            }}
+
+        <StyledMobileContainer
+          component={motion.nav}
+          animate={navbarOpen ? "open" : "closed"}
+          variants={variants}
+          boxShadow={2}
+          onClick={() => {
+            setNavbarOpen(!navbarOpen);
+          }}
+        >
+          <Stack
+            direction={"column"}
+            alignItems={"center"}
+            width={"70%"}
+            height={"100vh"}
+            padding={"1rem"}
+            backgroundColor={colors.MOBILENAV}
           >
-            <Stack
-              direction={"column"}
-              alignItems={"center"}
-              width={"70%"}
-              height={"100vh"}
-              padding={"1rem"}
-              backgroundColor={colors.MOBILENAV}
+            <Box
+              fontSize={"2rem"}
+              color={colors.ORANGE}
+              mb={1}
+              onClick={() => {
+                setNavbarOpen(!navbarOpen);
+              }}
+              sx={{
+                display: {
+                  xs: "block",
+                  sm: "block",
+                  md: "block",
+                  lg: "none",
+                  xl: "none",
+                },
+                position: "absolute",
+                right: "10px",
+              }}
             >
-              <Box
-                fontSize={"2rem"}
-                color={colors.ORANGE}
-                mb={1}
+              <AiOutlineClose />
+            </Box>
+            {navLinks.map((ele) => (
+              <MobileLink
+                to={ele.url}
+                key={ele.url}
+                underline="none"
+                color={colors.NAV_TEXT}
                 onClick={() => {
                   setNavbarOpen(!navbarOpen);
                 }}
-                sx={{
-                  display: {
-                    xs: "block",
-                    sm: "block",
-                    md: "block",
-                    lg: "none",
-                    xl: "none",
-                  },
-                  position: "absolute",
-                  right: "10px",
-                }}
               >
-                <AiOutlineClose />
-              </Box>
-              {navLinks.map((ele) => (
-                <MobileLink
-                  to={ele.url}
-                  key={ele.url}
-                  underline="none"
-                  color={colors.NAV_TEXT}
-                  onClick={() => {
-                    setNavbarOpen(!navbarOpen);
-                  }}
-                >
-                  <Typography color={colors.ORANGE} fontSize={"0.7rem"}>
-                    {ele.no}
-                  </Typography>
-                  <Typography>{ele.page}</Typography>
-                </MobileLink>
-              ))}
-              <Button
-                variant="outlined"
-                endIcon={<AiOutlineDownload />}
-                sx={{
-                  color: colors.ORANGE,
-                  borderColor: colors.ORANGE,
-                  textTransform: "capitalize",
-                  marginTop: "2rem",
-                }}
-              >
-                Resume
-              </Button>
-            </Stack>
-          </StyledMobileContainer>
-        )}
+                <Typography color={colors.ORANGE} fontSize={"0.7rem"}>
+                  {ele.no}
+                </Typography>
+                <Typography>{ele.page}</Typography>
+              </MobileLink>
+            ))}
+            <Button
+              variant="outlined"
+              endIcon={<AiOutlineDownload />}
+              sx={{
+                color: colors.ORANGE,
+                borderColor: colors.ORANGE,
+                textTransform: "capitalize",
+                marginTop: "2rem",
+              }}
+            >
+              Resume
+            </Button>
+          </Stack>
+        </StyledMobileContainer>
       </AppBar>
     </ThemeProvider>
   );

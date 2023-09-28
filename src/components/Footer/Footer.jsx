@@ -1,12 +1,37 @@
 import React from "react";
-import { Container, Stack, Typography, Box, Button } from "@mui/material";
+import {
+  Container,
+  Stack,
+  Typography,
+  Box,
+  Button,
+  styled,
+  Link,
+} from "@mui/material";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { Heading } from "../typography";
 import { colors } from "../../styles/globals";
+import { motion } from "framer-motion";
+
+const StyledLinkBox = styled(Box)({
+  color: colors.FOOTER_TEXT,
+  padding:"1rem",
+
+  "& : hover": {
+    color: colors.ORANGE,
+  },
+});
 
 const Footer = () => {
   return (
     <>
-      <Container maxwidth="md">
+      <Container
+        maxwidth="md"
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+      >
         <Box
           minHeight={"100%"}
           paddingX={["1rem", "5rem"]}
@@ -59,9 +84,33 @@ const Footer = () => {
                   (window.location = "mailto:dev.till.infinity@gmail.com")
                 }
               >
-                Say Hello
+                Say Hello !
               </Button>
             </Stack>
+            <Box mt={8} mb={2}>
+              <Stack direction={"row"} justifyContent={"center"} alignItems={"center"}>
+                <StyledLinkBox mr={2}>
+                  <Link href={"#"} color={colors.FOOTER_TEXT}>
+                    {<FiGithub size={"1.5rem"} />}
+                  </Link>
+                </StyledLinkBox>
+                <StyledLinkBox mr={2}>
+                  <Link href={"#"} color={colors.FOOTER_TEXT}>
+                    {<FiGithub size={"1.5rem"} />}
+                  </Link>
+                </StyledLinkBox>
+                <StyledLinkBox mr={2}>
+                  <Link href={"#"} color={colors.FOOTER_TEXT}>
+                    {<FiGithub size={"1.5rem"} />}
+                  </Link>
+                </StyledLinkBox>
+                <StyledLinkBox mr={2}>
+                  <Link href={"#"} color={colors.FOOTER_TEXT}>
+                    {<FiGithub size={"1.5rem"} />}
+                  </Link>
+                </StyledLinkBox>
+              </Stack>
+            </Box>
           </Box>
         </Box>
       </Container>
