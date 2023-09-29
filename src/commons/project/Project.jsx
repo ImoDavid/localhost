@@ -13,9 +13,7 @@ const StyledAboutBox = styled(Box)({
 const StyledTextBox = styled(Box)({
   lineHeight: "1rem",
   color: colors.OFF_WHITE,
-  "@media screen and (max-width: 1200px)": {
-    
-  },
+  "@media screen and (max-width: 1200px)": {},
 });
 
 const StyledLinkBox = styled(Box)({
@@ -100,7 +98,7 @@ const Project = ({
           sx={{
             order: ["1", orderPic],
             background: `url(${image})`,
-            backgroundSize: "cover",
+            backgroundSize: ["contain", "cover"],
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
           }}

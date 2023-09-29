@@ -71,7 +71,7 @@ const Projects = () => {
               Align="right"
               justify="end"
               mail={"https://react-icons.github.io/react-icons"}
-              image="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_9_h7x6h6.png"
+              image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966762/Screenshot_from_2023-09-29_06-51-52_kwmjcj.png"
             />
             <Project
               orderBox="2"
@@ -80,7 +80,7 @@ const Projects = () => {
               marginRight="0"
               title="The End Result"
               mail={"mailto:support@pchofficials.net"}
-              image="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_10_uixa5o.png"
+              image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966282/Screenshot_from_2023-09-29_06-44-22_qteh1q.png"
             />
             <Project
               title="What We Do"
@@ -88,7 +88,7 @@ const Projects = () => {
               Align="right"
               justify="end"
               mail={"https://react-icons.github.io/react-icons"}
-              image="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_9_h7x6h6.png"
+              image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966069/Screenshot_from_2023-09-29_06-40-23_lrhhmo.png"
             />
           </Box>
         </Box>

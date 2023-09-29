@@ -124,12 +124,33 @@ const About = () => {
               alignItems={"center"}
             >
               <Box
-                component={"img"}
-                src={testfile}
-                height={[200, 200]}
-                width={[200, 200]}
-                display={"block"}
-              />
+                sx={{
+                  borderRight: "2px solid orange",
+                  borderBottom: "2px solid orange",
+                  padding: "10px",
+                }}
+              >
+                <Box
+                  component={"img"}
+                  src={
+                    "https://res.cloudinary.com/dfljnnxln/image/upload/v1695961717/20230929_045456_aefsuk_-_Profile_Picture_xia0tv.png"
+                  }
+                  // src={
+                  //   "https://res.cloudinary.com/dfljnnxln/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1695959776/20230929_045456_aefsuk.jpg"
+                  // }
+                  height={[200, 250]}
+                  width={[200, 250]}
+                  display={"block"}
+                  sx={{
+                    objectFit: "contain",
+                    borderRadius: "10px",
+                    filter: "sepia(60%)",
+                    "&:hover": {
+                      filter: "sepia(0%)",
+                    },
+                  }}
+                />
+              </Box>
             </Box>
           </Stack>
         </Box>

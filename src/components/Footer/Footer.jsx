@@ -8,7 +8,9 @@ import {
   styled,
   Link,
 } from "@mui/material";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+
+import { FaGithub,FaLinkedin,FaTwitter } from "react-icons/fa";
+
 import { Heading } from "../typography";
 import { colors } from "../../styles/globals";
 import { motion } from "framer-motion";
@@ -89,24 +91,24 @@ const Footer = () => {
             </Stack>
             <Box mt={8} mb={2}>
               <Stack direction={"row"} justifyContent={"center"} alignItems={"center"}>
-                <StyledLinkBox mr={2}>
+                <StyledLinkBox mr={1}>
                   <Link href={"#"} color={colors.FOOTER_TEXT}>
-                    {<FiGithub size={"1.5rem"} />}
+                    {<FaGithub size={"1.5rem"} />}
                   </Link>
                 </StyledLinkBox>
-                <StyledLinkBox mr={2}>
+                <StyledLinkBox mr={1}>
                   <Link href={"#"} color={colors.FOOTER_TEXT}>
-                    {<FiGithub size={"1.5rem"} />}
+                    {<FaTwitter size={"1.5rem"} />}
                   </Link>
                 </StyledLinkBox>
-                <StyledLinkBox mr={2}>
+                <StyledLinkBox mr={1}>
                   <Link href={"#"} color={colors.FOOTER_TEXT}>
-                    {<FiGithub size={"1.5rem"} />}
+                    {<FaLinkedin size={"1.5rem"} />}
                   </Link>
                 </StyledLinkBox>
-                <StyledLinkBox mr={2}>
+                <StyledLinkBox mr={1}>
                   <Link href={"#"} color={colors.FOOTER_TEXT}>
-                    {<FiGithub size={"1.5rem"} />}
+                    {<FaLinkedin size={"1.5rem"} />}
                   </Link>
                 </StyledLinkBox>
               </Stack>
