@@ -135,9 +135,6 @@ const About = () => {
                   src={
                     "https://res.cloudinary.com/dfljnnxln/image/upload/v1695961717/20230929_045456_aefsuk_-_Profile_Picture_xia0tv.png"
                   }
-                  // src={
-                  //   "https://res.cloudinary.com/dfljnnxln/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1695959776/20230929_045456_aefsuk.jpg"
-                  // }
                   height={[200, 250]}
                   width={[200, 250]}
                   display={"block"}

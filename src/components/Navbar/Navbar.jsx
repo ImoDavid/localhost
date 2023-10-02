@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import { Link as RRLink, NavLink } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { BsFillBugFill } from "react-icons/bs";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -44,7 +43,6 @@ const StyledNavLink = styled(Box)({
   fontSize: ["1rem", "0.8rem"],
   cursor: "pointer",
   marginRight: "2.8rem",
-  // marginBottom: ["0rem", "0.5rem"],
 });
 
 const StyledLink = styled(Box)({
@@ -60,7 +58,6 @@ const StyledMobileContainer = styled(Box)({
   height: "100vh",
   width: "100%",
   background: "rgba(0, 0, 0, 0.7)",
-  // backgroundColor: "rgb(19, 28, 27)",
   top: "0",
   right: 0,
   padding: "1rem 0 ",
@@ -103,7 +100,6 @@ const Navbar = () => {
       >
         <Box
           color={colors.WHITE}
-          // width={["90%", "90%"]}
           marginY={["1rem", "1rem"]}
           padding={["0", "1rem"]}
           position={"sticky"}
@@ -135,12 +131,11 @@ const Navbar = () => {
               ml={[0, "20px"]}
             >
               <Box>
-              <AnchorLink
-                offset="150"
-                href={"#home"}
-                style={{ textDecoration: "none" }}
-                
-              >
+                <AnchorLink
+                  offset="150"
+                  href={"#home"}
+                  style={{ textDecoration: "none" }}
+                >
                   <Typography fontSize={"2.0rem"} color={colors.ORANGE}>
                     <BsFillBugFill />
                   </Typography>

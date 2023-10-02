@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-{
-}
 import {
   Container,
   Stack,
@@ -13,7 +11,6 @@ import {
   Button,
 } from "@mui/material";
 import { colors } from "../../styles/globals";
-import { motion } from "framer-motion";
 
 const StyledTypebox = styled(Box)({
   fontSize: "2rem",

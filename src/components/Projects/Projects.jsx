@@ -1,4 +1,4 @@
-import React,  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Stack, Typography, Box, styled } from "@mui/material";
 import { colors } from "../../styles/globals";
@@ -88,7 +88,9 @@ const Projects = () => {
               Align="right"
               justify="end"
               stack={"undisclosed"}
-              des={"I collabrated to work on the frontend development of this web application that helps showcase the amazing work of putting smiles and empowering street kids to become better part of the society. "}
+              des={
+                "I collabrated to work on the frontend development of this web application that helps showcase the amazing work of putting smiles and empowering street kids to become better part of the society. "
+              }
               Glink=""
               Slink={"https://www.streetpriests.org/"}
               image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966762/Screenshot_from_2023-09-29_06-51-52_kwmjcj.png"
@@ -102,7 +104,9 @@ const Projects = () => {
                 "React.Js, Styled Components, Redux Toolkit, REST API, SwiperJs, Git, Netlify."
               }
               title="wearFina"
-              des={"An E-Commerce web application which possesses user authetication, a cart and checkout system."}
+              des={
+                "An E-Commerce web application which possesses user authetication, a cart and checkout system."
+              }
               Glink=""
               Slink={"https://wearfina.netlify.app/"}
               image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966282/Screenshot_from_2023-09-29_06-44-22_qteh1q.png"
@@ -115,7 +119,9 @@ const Projects = () => {
                 "React.Js, React-bootstrap, Material UI, Css, Git, Netlify. "
               }
               justify="end"
-              des={"This is a stylish and minimalist multipage web application for an internal decoration agency. "}
+              des={
+                "This is a stylish and minimalist multipage web application for an internal decoration agency. "
+              }
               Glink=""
               Slink={"http://interno-decor.netlify.app/"}
               image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966069/Screenshot_from_2023-09-29_06-40-23_lrhhmo.png"
