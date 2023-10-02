@@ -52,6 +52,19 @@ const StyledLink = styled(Box)({
     color: colors.ORANGE,
   },
 });
+const IconBox = styled(Box)({
+  textDecoration: "none",
+  "&:hover": {
+    textDecoration: "none",
+  },
+  
+    "&:active": {
+      textDecoration: "none"
+    },
+    "&:visited": {
+      textDecoration: "none",
+    },
+});
 
 const StyledMobileContainer = styled(Box)({
   position: "absolute",
@@ -130,7 +143,7 @@ const Navbar = () => {
               flex={1}
               ml={[0, "20px"]}
             >
-              <Box>
+              <IconBox>
                 <AnchorLink
                   offset="150"
                   href={"#home"}
@@ -140,7 +153,7 @@ const Navbar = () => {
                     <BsFillBugFill />
                   </Typography>
                 </AnchorLink>
-              </Box>
+              </IconBox>
             </Box>
             <Box>
               <Box
