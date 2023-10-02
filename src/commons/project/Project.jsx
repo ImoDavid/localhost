@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Box, styled, Typography, Link } from "@mui/material";
+import { Stack, Box, styled, Typography } from "@mui/material";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { colors } from "../../styles/globals";
 import { motion } from "framer-motion";
@@ -18,6 +18,7 @@ const StyledTextBox = styled(Box)({
 
 const StyledLinkBox = styled(Box)({
   color: colors.FOOTER_TEXT,
+  cursor: "pointer",
 
   "& : hover": {
     color: colors.ORANGE,
@@ -32,8 +33,11 @@ const Project = ({
   image,
   marginLeft,
   Align = "left",
-  mail,
+  Glink,
+  Slink,
   justify = "start",
+  stack,
+  des,
 }) => {
   return (
     <>
@@ -60,32 +64,29 @@ const Project = ({
               justifyContent={"space-between"}
               mb={[1.5]}
             >
-              <Typography variant="h5" fontSize={"1.8rem"}>
+              <Typography variant="h5" fontSize={"1.8rem"} fontWeight={500}>
                 {title}
               </Typography>
               <Stack direction={"row"} justifyContent={justify}>
-                <StyledLinkBox mr={2}>
-                  <Link href={mail} color={colors.FOOTER_TEXT}>
-                    {<FiGithub size={"1.5rem"} />}
-                  </Link>
+                <StyledLinkBox
+                  mr={2}
+                  display={stack == "undisclosed" ? "none" : "block"}
+                  onClick={() => window.open(Glink, "_blank")}
+                >
+                  {<FiGithub size={"1.5rem"} />}
                 </StyledLinkBox>
-                <StyledLinkBox>
-                  <Link href={mail} color={colors.FOOTER_TEXT}>
-                    {<FiExternalLink size={"1.5rem"} />}
-                  </Link>
+                <StyledLinkBox onClick={() => window.open(Slink, "_blank")}>
+                  {<FiExternalLink size={"1.5rem"} />}
                 </StyledLinkBox>
               </Stack>
             </Stack>
 
-            <Typography fontSize={"0.8rem"}>
-              {" "}
-              It is a long established fact that a reader will be distracted by
-              the of readable content of a page when lookings at its layouts the
-              points of using that it has a more-or-less normal.
+            <Typography mt={[1, 3]} fontSize={"0.8rem"}>
+              {des}
             </Typography>
-            <Typography fontSize={"0.8rem"}>
+            <Typography mt={[1, 3]} fontSize={"0.8rem"}>
               {" "}
-              Stack: html,css,material UI, Reactjs, swiperJs
+              Stack/Tools:{stack}
             </Typography>
           </StyledTextBox>
         </Box>

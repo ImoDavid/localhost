@@ -1,21 +1,20 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { Link as RRLink, NavLink } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { BsFillBugFill } from "react-icons/bs";
 import { RiMenu3Fill } from "react-icons/ri";
 import { AiOutlineDownload, AiOutlineClose } from "react-icons/ai";
-
-RiMenu3Fill;
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { AppBar, Box, Stack, styled, Typography, Button } from "@mui/material";
 import { colors } from "../../styles/globals";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { page: "home", url: "/", no: "01." },
-  { page: "experience", url: "/beneficiary", no: "02." },
-  { page: "work", url: "/winners", no: "03." },
-  { page: "contact", url: "/contact", no: "04." },
+  { page: "about", url: "#about", no: "01." },
+  { page: "experience", url: "#experience", no: "02." },
+  { page: "projects", url: "#projects", no: "03." },
+  { page: "contact", url: "#contact", no: "04." },
 ];
 
 const theme = createTheme({
@@ -48,7 +47,7 @@ const StyledNavLink = styled(Box)({
   // marginBottom: ["0rem", "0.5rem"],
 });
 
-const StyledLink = styled(NavLink)({
+const StyledLink = styled(Box)({
   textDecoration: "none",
   color: colors.NAV_TEXT,
   "&:hover": {
@@ -70,7 +69,7 @@ const StyledMobileContainer = styled(Box)({
   justifyContent: "end",
 });
 
-const MobileLink = styled(NavLink)({
+const MobileLink = styled(Box)({
   textDecoration: "none",
   color: colors.NAV_TEXT,
   margin: "3rem 0",
@@ -136,11 +135,16 @@ const Navbar = () => {
               ml={[0, "20px"]}
             >
               <Box>
-                <RRLink to={"/"}>
+              <AnchorLink
+                offset="150"
+                href={"#home"}
+                style={{ textDecoration: "none" }}
+                
+              >
                   <Typography fontSize={"2.0rem"} color={colors.ORANGE}>
                     <BsFillBugFill />
                   </Typography>
-                </RRLink>
+                </AnchorLink>
               </Box>
             </Box>
             <Box>
@@ -161,13 +165,15 @@ const Navbar = () => {
                       <Typography color={colors.ORANGE} fontSize={"0.7rem"}>
                         {ele.no}
                       </Typography>
-                      <StyledLink
-                        to={ele.url}
-                        underline="none"
-                        color={colors.NAV_TEXT}
+                      <AnchorLink
+                        offset="150"
+                        href={ele.url}
+                        style={{ textDecoration: "none" }}
                       >
-                        {ele.page}
-                      </StyledLink>
+                        <StyledLink underline="none" color={colors.NAV_TEXT}>
+                          {ele.page}
+                        </StyledLink>
+                      </AnchorLink>
                     </StyledNavLink>
                   ))}
                   <Button
@@ -253,20 +259,26 @@ const Navbar = () => {
               <AiOutlineClose />
             </Box>
             {navLinks.map((ele) => (
-              <MobileLink
-                to={ele.url}
+              <AnchorLink
+                offset="150"
+                href={ele.url}
+                style={{ textDecoration: "none" }}
                 key={ele.url}
-                underline="none"
-                color={colors.NAV_TEXT}
-                onClick={() => {
-                  setNavbarOpen(!navbarOpen);
-                }}
               >
-                <Typography color={colors.ORANGE} fontSize={"0.7rem"}>
-                  {ele.no}
-                </Typography>
-                <Typography>{ele.page}</Typography>
-              </MobileLink>
+                <MobileLink
+                  to={ele.url}
+                  underline="none"
+                  color={colors.NAV_TEXT}
+                  onClick={() => {
+                    setNavbarOpen(!navbarOpen);
+                  }}
+                >
+                  <Typography color={colors.ORANGE} fontSize={"0.7rem"}>
+                    {ele.no}
+                  </Typography>
+                  <Typography>{ele.page}</Typography>
+                </MobileLink>
+              </AnchorLink>
             ))}
             <Button
               variant="outlined"

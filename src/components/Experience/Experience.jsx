@@ -66,6 +66,7 @@ const Experience = () => {
     <>
       <Container
         maxwidth="md"
+        id="experience"
         component={motion.div}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

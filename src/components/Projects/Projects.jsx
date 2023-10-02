@@ -1,5 +1,6 @@
-import React from "react";
-import { Container, Stack, Typography, Box, styled, Link } from "@mui/material";
+import React,  from "react";
+import { Link } from "react-router-dom";
+import { Container, Stack, Typography, Box, styled } from "@mui/material";
 import { colors } from "../../styles/globals";
 import { BiFolder } from "react-icons/bi";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
@@ -18,24 +19,39 @@ const StyledLinkBox = styled(Box)({
 const OtherProjects = [
   {
     index: "1",
-    title: "home",
-    text: "jdshcjsjhksjd sdjkfhjasdjfhdgfhdgfhdg hdfgsdhgfhgasjfjsdsfj jhdfvhgh",
+    title: "shoplist Organizer",
+    text: "A web application to organize shopping or To-Do list with features like Add, Delete and sharing the list.",
+    Glink: "https://shoplistorganiser.netlify.app/",
+    stack: "React.Js React-Bootstrap ReduxToolkit Css Git Netlify.",
   },
   {
-    index: "1",
-    title: "home",
-    Glink: "https://react-icons.github.io/react-icons",
-    text: "jdshcjsjhksjd sdjkfhjasdjfhdgfhdgfhdg hdfgsdhgfhgasjfjsdsfj jhdfvhgh",
+    index: "2",
+    title: "easyBank",
+    Glink: "https://clone-easy-bank.netlify.app/",
+    text: "A  single one page website for a digital bank aimed at providing digital financial solutions.",
+    stack: "Html Bootstrap5 Javascript Sass Git Netlify.",
   },
   {
-    index: "1",
-    title: "home",
-    text: "jdshcjsjhksjd sdjkfhjasdjfhdgfhdgfhdg hdfgsdhgfhgasjfjsdsfj jhdfvhgh",
+    index: "3",
+    title: "pizzaHut",
+    text: "A web application that allows visitors/ customers to explore the menu and gallery of a restuarant.",
+    Glink: "https://imodavid.github.io/pizzahut-landing/",
+    stack: "Html Css Javascript SwiperJs Git.",
   },
   {
-    index: "1",
-    title: "home",
-    text: "jdshcjsjhksjd sdjkfhjasdjfhdgfhdgfhdg hdfgsdhgfhgasjfjsdsfj jhdfvhgh",
+    index: "4",
+    title: "zoeyTote",
+    text: "A single landing page for an E-commerce and female fashion suite.",
+    Glink: "https://imodavid.github.io/zoey-tote/",
+    stack: "Html Css Bootstrap5 Git.",
+  },
+  {
+    index: "5",
+    title: "fylo",
+    text: "A landing page for Fylo which helps users safe-keep important documents.",
+    Glink:
+      "https://imodavid.github.io/fylo-landing-page-with-two-column-layout/",
+    stack: "Html Css Git.",
   },
 ];
 
@@ -44,6 +60,7 @@ const Projects = () => {
     <>
       <Container
         maxwidth="md"
+        id="projects"
         component={motion.div}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -66,11 +83,14 @@ const Projects = () => {
           </Box>
           <Box>
             <Project
-              title="What We Do"
+              title="streetPriest"
               buttonText="Our Concept"
               Align="right"
               justify="end"
-              mail={"https://react-icons.github.io/react-icons"}
+              stack={"undisclosed"}
+              des={"I collabrated to work on the frontend development of this web application that helps showcase the amazing work of putting smiles and empowering street kids to become better part of the society. "}
+              Glink=""
+              Slink={"https://www.streetpriests.org/"}
               image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966762/Screenshot_from_2023-09-29_06-51-52_kwmjcj.png"
             />
             <Project
@@ -78,17 +98,43 @@ const Projects = () => {
               orderPic="1"
               marginLeft={"3rem"}
               marginRight="0"
-              title="The End Result"
-              mail={"mailto:support@pchofficials.net"}
+              stack={
+                "React.Js, Styled Components, Redux Toolkit, REST API, SwiperJs, Git, Netlify."
+              }
+              title="wearFina"
+              des={"An E-Commerce web application which possesses user authetication, a cart and checkout system."}
+              Glink=""
+              Slink={"https://wearfina.netlify.app/"}
               image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966282/Screenshot_from_2023-09-29_06-44-22_qteh1q.png"
             />
             <Project
-              title="What We Do"
+              title="Interno"
               buttonText="Our Concept"
               Align="right"
+              stack={
+                "React.Js, React-bootstrap, Material UI, Css, Git, Netlify. "
+              }
               justify="end"
-              mail={"https://react-icons.github.io/react-icons"}
+              des={"This is a stylish and minimalist multipage web application for an internal decoration agency. "}
+              Glink=""
+              Slink={"http://interno-decor.netlify.app/"}
               image="https://res.cloudinary.com/dfljnnxln/image/upload/v1695966069/Screenshot_from_2023-09-29_06-40-23_lrhhmo.png"
+            />
+            <Project
+              orderBox="2"
+              orderPic="1"
+              marginLeft={"3rem"}
+              stack={
+                "Html, Css, Bootstrap 5, Javascript, Scroll trigger, Git. "
+              }
+              marginRight="0"
+              title="sunnySide"
+              des={" A single pager landing page for a creative agency. "}
+              Glink=""
+              Slink={
+                "https://imodavid.github.io/sunny-side-agency-landing-page/"
+              }
+              image="https://res.cloudinary.com/dfljnnxln/image/upload/v1696071223/Screenshot_from_2023-09-30_11-36-29_huxvxz.png"
             />
           </Box>
         </Box>
@@ -118,6 +164,12 @@ const Projects = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.3 },
+                }}
+                onClick={() => window.open(ele.Glink, "_blank")}
+                sx={{ cursor: "pointer" }}
               >
                 <Stack
                   direction={"row"}
@@ -129,16 +181,24 @@ const Projects = () => {
                     <BiFolder color={colors.ORANGE} size={"2rem"} />
                   </Box>
                   <Stack direction={"row"}>
-                    <StyledLinkBox>
-                      <Link href={ele.Glink} color={colors.FOOTER_TEXT}>
+                    <Link
+                      to={ele.Elink}
+                      target={"_blank"}
+                      color={colors.FOOTER_TEXT}
+                    >
+                      <StyledLinkBox>
                         {<FiGithub size={"1.5rem"} />}
-                      </Link>
-                    </StyledLinkBox>
-                    <StyledLinkBox>
-                      <Link href={ele.Elink} color={colors.FOOTER_TEXT}>
+                      </StyledLinkBox>
+                    </Link>
+                    <Link
+                      to={ele.Glink}
+                      target="_blank"
+                      color={colors.FOOTER_TEXT}
+                    >
+                      <StyledLinkBox>
                         {<FiExternalLink size={"1.5rem"} />}
-                      </Link>
-                    </StyledLinkBox>
+                      </StyledLinkBox>
+                    </Link>
                   </Stack>
                 </Stack>
                 <Box>
@@ -150,8 +210,20 @@ const Projects = () => {
                   >
                     {ele.title}
                   </Typography>
-                  <Typography color={colors.OFF_WHITE} fontWeight={700}>
+                  <Typography
+                    color={colors.OFF_WHITE}
+                    fontSize={"0.7rem"}
+                    fontWeight={700}
+                  >
                     {ele.text}
+                  </Typography>
+                  <Typography
+                    mt={1.0}
+                    fontSize={"0.8rem"}
+                    color={colors.OFF_WHITE}
+                  >
+                    {" "}
+                    Stack:{ele.stack}
                   </Typography>
                 </Box>
               </Box>

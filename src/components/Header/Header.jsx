@@ -1,6 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+{
+}
 import {
   Container,
   Stack,
@@ -39,7 +42,7 @@ const StyledTextbox = styled(Box)({
 const Header = () => {
   return (
     <>
-      <Container maxwidth="md">
+      <Container maxwidth="md" id="home">
         <Box minHeight={["80vh", "100vh"]} paddingX={["1rem", "2rem"]}>
           <Stack direction={"column"} marginTop={"5rem"}>
             <Typography
@@ -89,20 +92,22 @@ const Header = () => {
               </Typography>
             </StyledTextbox>
             <Stack direction={"row"} marginTop={["3.5rem", "2.5rem"]}>
-              <Button
-                variant="outlined"
-                sx={{
-                  color: colors.ORANGE,
-                  borderColor: colors.ORANGE,
-                  textTransform: "capitalize",
-                  padding: ["1rem", "0.5rem"],
-                  "&:hover": {
-                    borderColor: colors.OFF_WHITE,
-                  },
-                }}
-              >
-                I Want to know more!
-              </Button>
+              <AnchorLink offset="150" href="#about">
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: colors.ORANGE,
+                    borderColor: colors.ORANGE,
+                    textTransform: "capitalize",
+                    padding: ["1rem", "0.5rem"],
+                    "&:hover": {
+                      borderColor: colors.OFF_WHITE,
+                    },
+                  }}
+                >
+                  I Want to know more!
+                </Button>
+              </AnchorLink>
             </Stack>
           </Stack>
         </Box>

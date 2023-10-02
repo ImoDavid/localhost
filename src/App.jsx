@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Header } from "./components/Header";
 import { Loader } from "./components/Loader";
@@ -21,9 +20,6 @@ function App() {
   } else {
     return (
       <>
-        {/* <Routes>
-      <Route path="/nav" element={<Navbar />} />
-      </Routes> */}
         <Navbar />
         <Header />
         <About />

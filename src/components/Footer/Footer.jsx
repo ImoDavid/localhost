@@ -9,7 +9,7 @@ import {
   Link,
 } from "@mui/material";
 
-import { FaGithub,FaLinkedin,FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaSlack } from "react-icons/fa";
 
 import { Heading } from "../typography";
 import { colors } from "../../styles/globals";
@@ -17,18 +17,35 @@ import { motion } from "framer-motion";
 
 const StyledLinkBox = styled(Box)({
   color: colors.FOOTER_TEXT,
-  padding:"1rem",
+  padding: "1rem",
 
   "& : hover": {
     color: colors.ORANGE,
   },
 });
 
+const Footerlinks = [
+  { icon: <FaGithub />, url: "https://github.com/ImoDavid" },
+  {
+    icon: <FaLinkedin />,
+    url: "https://www.linkedin.com/in/imo-david-924672230",
+  },
+  {
+    icon: <FaTwitter />,
+    url: "https://twitter.com/emperorjagz?t=TL0gss3lbZonKGViMokGVg&s=09",
+  },
+  {
+    icon: <FaSlack />,
+    url: "https://slack.com/404?",
+  },
+];
+
 const Footer = () => {
   return (
     <>
       <Container
         maxwidth="md"
+        id="contact"
         component={motion.div}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -90,28 +107,22 @@ const Footer = () => {
               </Button>
             </Stack>
             <Box mt={8} mb={2}>
-              <Stack direction={"row"} justifyContent={"center"} alignItems={"center"}>
-                <StyledLinkBox mr={1}>
-                  <Link href={"#"} color={colors.FOOTER_TEXT}>
-                    {<FaGithub size={"1.5rem"} />}
-                  </Link>
-                </StyledLinkBox>
-                <StyledLinkBox mr={1}>
-                  <Link href={"#"} color={colors.FOOTER_TEXT}>
-                    {<FaTwitter size={"1.5rem"} />}
-                  </Link>
-                </StyledLinkBox>
-                <StyledLinkBox mr={1}>
-                  <Link href={"#"} color={colors.FOOTER_TEXT}>
-                    {<FaLinkedin size={"1.5rem"} />}
-                  </Link>
-                </StyledLinkBox>
-                <StyledLinkBox mr={1}>
-                  <Link href={"#"} color={colors.FOOTER_TEXT}>
-                    {<FaLinkedin size={"1.5rem"} />}
-                  </Link>
-                </StyledLinkBox>
+              <Stack
+                direction={"row"}
+                justifyContent={"center"}
+                alignItems={"center"}
+              >
+                {Footerlinks.map((ele) => (
+                  <StyledLinkBox mr={1} key={ele.url}>
+                    <Link href={ele.url} color={colors.FOOTER_TEXT}>
+                      <Typography fontSize={"1.5rem"}> {ele.icon}</Typography>
+                    </Link>
+                  </StyledLinkBox>
+                ))}
               </Stack>
+              <Typography color={colors.OFF_WHITE} mt={5} fontSize={"0.8rem"}>
+                © Copyright Imo O.D 2023
+              </Typography>
             </Box>
           </Box>
         </Box>

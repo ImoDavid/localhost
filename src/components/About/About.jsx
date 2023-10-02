@@ -11,7 +11,6 @@ import { FiFigma } from "react-icons/fi";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { colors } from "../../styles/globals";
 import { Heading } from "../typography/";
-import testfile from "../../assets/testfile.jpeg";
 import { motion } from "framer-motion";
 
 const StyledStack = styled(Box)({
@@ -53,6 +52,7 @@ const About = () => {
     <>
       <Container
         maxwidth="md"
+        id="about"
         component={motion.div}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
