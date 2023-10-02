@@ -89,7 +89,11 @@ const Header = () => {
               </Typography>
             </StyledTextbox>
             <Stack direction={"row"} marginTop={["3.5rem", "2.5rem"]}>
-              <AnchorLink offset="150" href="#about">
+              <AnchorLink
+                offset="150"
+                href="#about"
+                style={{ textDecoration: "none" }}
+              >
                 <Button
                   variant="outlined"
                   sx={{
