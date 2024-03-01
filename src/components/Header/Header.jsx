@@ -68,7 +68,7 @@ const Header = () => {
                     .pauseFor(5)
                     .typeString("<strong>Frontend Developer</strong>")
                     .pauseFor(300)
-                    .deleteChars(20)
+                    .deleteChars(22)
                     .typeString("<strong>I Build Things For The Web</strong>")
                     .pauseFor(700)
                     .typeString(
@@ -81,7 +81,7 @@ const Header = () => {
             </StyledTypebox>
             <StyledTextbox paddingRight={["1.5rem", "21rem"]}>
               <Typography variant="p" fontSize={["1rem", "1rem"]}>
-                <span style={{ color: "orange" }}>Frontend Web Developer</span>{" "}
+                <span style={{ color: "orange" }}> Frontend Web Developer</span>{" "}
                 specialized in building exceptional digital experiences. I am an
                 Engineer valued for driving high-performance accessible web
                 experiences. I develop fast, quality, user-friendly and scalable

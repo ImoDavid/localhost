@@ -144,7 +144,7 @@ const Experience = () => {
                         lead developer{" "}
                         <span style={{ color: "orange" }}>@Nutrilife</span>
                       </StyledWorkrole>
-                      <StyledWorkdate>febuary 2023 - present</StyledWorkdate>
+                      <StyledWorkdate>feb 2023 - jan 2024</StyledWorkdate>
                     </Box>
                     <Box>
                       <StyledRowbox>

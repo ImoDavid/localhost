@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Stack, Typography, Box, styled } from "@mui/material";
 import { BsGit } from "react-icons/bs";
-import { FaBootstrap, FaReact, FaSass } from "react-icons/fa";
+import { FaBootstrap, FaReact, FaSass ,FaNodeJs } from "react-icons/fa";
 import {
   BiLogoMongodb,
   BiLogoJavascript,
@@ -45,6 +45,7 @@ const boxItemstwo = [
   { id: "0.2", icon: <AiOutlineAntDesign />, stack: "ant design" },
   { id: "0.4", icon: <FaSass />, stack: "sass" },
   { id: "0.3", icon: <BiLogoTypescript />, stack: "Typescript" },
+ { id: "0.4", icon: <FaNodeJs />, stack: "Node.js" },
 ];
 
 const About = () => {
@@ -70,7 +71,7 @@ const About = () => {
           <Stack direction={["column", "row"]}>
             <Box width={["100%", "65%"]} paddingY={"1.5rem"}>
               <StyledAbouttext>
-                I'm a frontend developer with over four years experience and a
+                I'm a Javascript developer with over three years experience and a
                 proven track record of translating complex requirements into
                 elegant, responsive websites by weaving creativity and
                 functionality together to craft compelling web interfaces that
@@ -78,7 +79,7 @@ const About = () => {
               </StyledAbouttext>
 
               <StyledAbouttext display={"block"} marginY={"1rem"}>
-                Currently the Lead Developer for an NGO{" "}
+                Currently the Lead Developer volunteering for an NGO{" "}
                 <span style={{ color: "orange" }}>Nutrilife </span> where i've
                 embraced the challenge of spearheading our NGO's digital
                 transformation journey by leveraging the latest web technologies
@@ -157,3 +158,22 @@ const About = () => {
 };
 
 export default About;
+
+
+//Experienced Fullstack Developer with a proven track record of over 3 years, adept at crafting scalable, maintainable, and efficient web applications. Proficient in both front-end and back-end technologies, with a strong emphasis on delivering high-quality products that meet client needs and exceed expectations. Skilled in designing robust architectures, implementing cutting-edge features, and optimizing performance for optimal user experience. Committed to staying updated with the latest industry trends and continuously refining skills to tackle new challenges effectively.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
