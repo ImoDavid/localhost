@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Container,
   Stack,
@@ -6,61 +6,62 @@ import {
   Box,
   styled,
   Button,
-} from "@mui/material";
-import { BiSolidRightArrow } from "react-icons/bi";
-import { colors } from "../../styles/globals";
-import { Heading } from "../typography/";
-import { motion } from "framer-motion";
+} from '@mui/material';
+import { BiSolidRightArrow } from 'react-icons/bi';
+import { colors } from '../../styles/globals';
+import { Heading } from '../typography/';
+import { motion } from 'framer-motion';
 
 const NameButton = styled(Button)({
   color: colors.OFF_WHITE,
-  textTransform: "capitalize",
-  borderRadius: "0px",
-  padding: "1rem",
-  "@media screen and (max-width: 1200px)": {
-    padding: "1rem 0.6rem",
+  textTransform: 'capitalize',
+  borderRadius: '0px',
+  padding: '1rem',
+  '@media screen and (max-width: 1200px)': {
+    padding: '1rem 0.6rem',
   },
 });
 const StyledWorkrole = styled(Typography)({
   color: colors.OFF_WHITE,
-  textTransform: "capitalize",
-  fontSize: "1rem",
-  marginBottom: "0.5rem",
+  textTransform: 'capitalize',
+  fontSize: '1rem',
+  marginBottom: '0.5rem',
 });
 const StyledWorkdate = styled(Typography)({
   color: colors.OFF_WHITE,
-  textTransform: "capitalize",
-  fontSize: "0.7rem",
+  textTransform: 'capitalize',
+  fontSize: '0.7rem',
 });
 const StyledWorkicon = styled(Typography)({
   color: colors.ORANGE,
-  mr: "5",
-  marginTop: "0.3rem",
-  fontSize: "0.6rem",
+  mr: '5',
+  marginTop: '0.3rem',
+  fontSize: '0.6rem',
 });
 const StyledWorktext = styled(Typography)({
   color: colors.OFF_WHITE,
-  marginLeft: "0.5rem",
-  fontSize: ["0.6rem", "0.9rem"],
-  fontWeight: "400",
-  "@media screen and (max-width: 1200px)": {
-    fontWeight: "300",
+  marginLeft: '0.5rem',
+  fontSize: ['0.6rem', '0.9rem'],
+  fontWeight: '400',
+  '@media screen and (max-width: 1200px)': {
+    fontWeight: '300',
   },
 });
 const StyledRowbox = styled(Box)({
-  display: "flex",
-  flexDirection: "row",
-  marginBottom: "1rem",
+  display: 'flex',
+  flexDirection: 'row',
+  marginBottom: '1rem',
 
-  "@media screen and (max-width: 1200px)": {
-    marginBottom: "1rem",
+  '@media screen and (max-width: 1200px)': {
+    marginBottom: '1rem',
   },
 });
 
 const Experience = () => {
-  const [nutrilife, setNutrilife] = useState(true);
+  const [t40, setT40] = useState(true);
+  const [fless, setFless] = useState(false);
   const [shona, setShona] = useState(false);
-  const [freelance, setFreelance] = useState(false);
+  const [techpam, setTechpam] = useState(false);
 
   return (
     <>
@@ -70,34 +71,71 @@ const Experience = () => {
         component={motion.div}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+        transition={{ type: 'spring', stiffness: 100, delay: 0.3 }}
       >
         <Box
-          minHeight={"100%"}
-          paddingX={["2.2rem", "10rem"]}
-          marginTop={["13.5rem", "10rem"]}
-          marginBottom={["1rem", "2rem"]}
+          minHeight={'100%'}
+          paddingX={['2.2rem', '10rem']}
+          marginTop={['13.5rem', '10rem']}
+          marginBottom={['1rem', '2rem']}
         >
           <Box>
-            <Heading number={"02."} title={"working experience"} />
+            <Heading number={'02.'} title={'working experience'} />
           </Box>
           <Box>
-            <Stack direction={"row"} paddingY={2}>
+            <Stack direction={'row'} paddingY={2}>
               <Box
                 borderBottom={
-                  nutrilife
+                  t40
                     ? `2px solid ${colors.ORANGE}`
                     : `2px solid ${colors.OFF_WHITE}`
                 }
               >
                 <NameButton
                   onClick={() => {
-                    setNutrilife(true);
+                    setT40(true);
+                    setFless(false);
                     setShona(false);
-                    setFreelance(false);
+                    setTechpam(false);
                   }}
                 >
-                  nutrilife
+                  T40
+                </NameButton>
+              </Box>{' '}
+              <Box
+                borderBottom={
+                  fless
+                    ? `2px solid ${colors.ORANGE}`
+                    : `2px solid ${colors.OFF_WHITE}`
+                }
+              >
+                <NameButton
+                  onClick={() => {
+                    setFless(true);
+                    setT40(false);
+                    setShona(false);
+                    setTechpam(false);
+                  }}
+                >
+                  Fless
+                </NameButton>
+              </Box>
+              <Box
+                borderBottom={
+                  techpam
+                    ? `2px solid ${colors.ORANGE}`
+                    : `2px solid ${colors.OFF_WHITE}`
+                }
+              >
+                <NameButton
+                  onClick={() => {
+                    setTechpam(true);
+                    setFless(false);
+                    setT40(false);
+                    setShona(false);
+                  }}
+                >
+                  TECHPAM
                 </NameButton>
               </Box>
               <Box
@@ -110,41 +148,27 @@ const Experience = () => {
                 <NameButton
                   onClick={() => {
                     setShona(true);
-                    setNutrilife(false);
-                    setFreelance(false);
+                    setFless(false);
+                    setT40(false);
+                    setTechpam(false);
                   }}
                 >
-                  shona{" "}
-                </NameButton>
-              </Box>
-              <Box
-                borderBottom={
-                  freelance
-                    ? `2px solid ${colors.ORANGE}`
-                    : `2px solid ${colors.OFF_WHITE}`
-                }
-              >
-                <NameButton
-                  onClick={() => {
-                    setFreelance(true);
-                    setNutrilife(false);
-                    setShona(false);
-                  }}
-                >
-                  freelance
+                  shona{' '}
                 </NameButton>
               </Box>
             </Stack>
             <Box>
-              {nutrilife && (
+              {t40 && (
                 <>
                   <Box>
                     <Box mb={2}>
                       <StyledWorkrole>
-                        lead developer{" "}
-                        <span style={{ color: "orange" }}>@Nutrilife</span>
+                        frontend Engineer{' '}
+                        <span style={{ color: 'orange' }}>
+                          @T40 TECHNOLOGIES
+                        </span>
                       </StyledWorkrole>
-                      <StyledWorkdate>feb 2023 - jan 2024</StyledWorkdate>
+                      <StyledWorkdate>March 2024 - June 2024</StyledWorkdate>
                     </Box>
                     <Box>
                       <StyledRowbox>
@@ -152,9 +176,9 @@ const Experience = () => {
                           <BiSolidRightArrow />
                         </StyledWorkicon>
                         <StyledWorktext>
-                          Led a dynamic team in creating intuitive web platforms
-                          that empowers our supporters and stakeholders to
-                          connect with our NGO's cause in meaningful ways.
+                          Built the back office portal using React, resulting in
+                          20% improved operator utilization of booking ticket
+                          services.
                         </StyledWorktext>
                       </StyledRowbox>
                       <StyledRowbox>
@@ -162,8 +186,10 @@ const Experience = () => {
                           <BiSolidRightArrow />
                         </StyledWorkicon>
                         <StyledWorktext>
-                          Implemented agile methodologies, increasing project
-                          efficiency.
+                          Made fixes and implementation on other products like
+                          myT40, intercity, and intercity partner websites
+                          producing better interactive interfaces, increasing
+                          customer interaction by 50%.
                         </StyledWorktext>
                       </StyledRowbox>
                       <StyledRowbox>
@@ -171,8 +197,18 @@ const Experience = () => {
                           <BiSolidRightArrow />
                         </StyledWorkicon>
                         <StyledWorktext>
-                          Collaborated with cross-functional teams to deliver
-                          projects on time and within budget.
+                          Integrated third-party APIs to enhance functionality,
+                          enabling additional services and improve user
+                          engagement.
+                        </StyledWorktext>
+                      </StyledRowbox>
+                      <StyledRowbox>
+                        <StyledWorkicon>
+                          <BiSolidRightArrow />
+                        </StyledWorkicon>
+                        <StyledWorktext>
+                          Collaborate with cross-functional teams in an Agile
+                          development environment using Notion.
                         </StyledWorktext>
                       </StyledRowbox>
                     </Box>
@@ -184,8 +220,8 @@ const Experience = () => {
                   <Box>
                     <Box mb={2}>
                       <StyledWorkrole>
-                        frontend developer{" "}
-                        <span style={{ color: "orange" }}>@shona</span> (Remote)
+                        frontend developer{' '}
+                        <span style={{ color: 'orange' }}>@shona</span> (Remote)
                       </StyledWorkrole>
                       <StyledWorkdate> march 2022 - Jan 2023</StyledWorkdate>
                     </Box>
@@ -231,15 +267,15 @@ const Experience = () => {
                   </Box>
                 </>
               )}
-              {freelance && (
+              {fless && (
                 <>
                   <Box>
                     <Box mb={2}>
                       <StyledWorkrole>
-                        web developer{" "}
-                        <span style={{ color: "orange" }}>@upwork</span>
+                        frontend developer{' '}
+                        <span style={{ color: 'orange' }}>@Fless</span> (Remote)
                       </StyledWorkrole>
-                      <StyledWorkdate> June 2021 - present</StyledWorkdate>
+                      <StyledWorkdate> nov 2023 - February 2024</StyledWorkdate>
                     </Box>
                     <Box>
                       <StyledRowbox>
@@ -247,8 +283,9 @@ const Experience = () => {
                           <BiSolidRightArrow />
                         </StyledWorkicon>
                         <StyledWorktext>
-                          Developed the frontend of a large scale E-commerce
-                          website using reactJs and styled components.
+                          Built a comprehensive dashboard to visualize financial
+                          data, providing small businesses with insightful
+                          analytics.
                         </StyledWorktext>
                       </StyledRowbox>
                       <StyledRowbox>
@@ -256,9 +293,8 @@ const Experience = () => {
                           <BiSolidRightArrow />
                         </StyledWorkicon>
                         <StyledWorktext>
-                          Work with tecnologies like HTML, CSS, vanilla JS to
-                          transform UI mockups to scalable high performance
-                          websites and web applications.
+                          Utilized charting library ( Chart.js) to create
+                          interactive and intuitive visualizations.
                         </StyledWorktext>
                       </StyledRowbox>
                       <StyledRowbox>
@@ -266,8 +302,57 @@ const Experience = () => {
                           <BiSolidRightArrow />
                         </StyledWorkicon>
                         <StyledWorktext>
-                          Create well functioning static/ dynamic websites for
-                          clients.
+                          Ensured real-time data updates and responsiveness for
+                          a seamless user experience.
+                        </StyledWorktext>
+                      </StyledRowbox>
+                    </Box>
+                  </Box>
+                </>
+              )}
+              {techpam && (
+                <>
+                  <Box>
+                    <Box mb={2}>
+                      <StyledWorkrole>
+                        Fullstack web developer{' '}
+                        <span style={{ color: 'orange' }}>@TECPAM</span>{' '}
+                        (remote)
+                      </StyledWorkrole>
+                      <StyledWorkdate>
+                        {' '}
+                        january 2022 - october 2023
+                      </StyledWorkdate>
+                    </Box>
+                    <Box>
+                      <StyledRowbox>
+                        <StyledWorkicon>
+                          <BiSolidRightArrow />
+                        </StyledWorkicon>
+                        <StyledWorktext>
+                          Designed and implemented custom web applications
+                          tailored to client specifications, improving their
+                          online presence and operational efficiency.
+                        </StyledWorktext>
+                      </StyledRowbox>
+                      <StyledRowbox>
+                        <StyledWorkicon>
+                          <BiSolidRightArrow />
+                        </StyledWorkicon>
+                        <StyledWorktext>
+                          Leveraged modern front-end frameworks and libraries
+                          such as React build dynamic and responsive user
+                          interfaces.
+                        </StyledWorktext>
+                      </StyledRowbox>
+                      <StyledRowbox>
+                        <StyledWorkicon>
+                          <BiSolidRightArrow />
+                        </StyledWorkicon>
+                        <StyledWorktext>
+                          Provided ongoing maintenance and support, addressing
+                          client needs and ensuring the long-term success of web
+                          projects.
                         </StyledWorktext>
                       </StyledRowbox>
                     </Box>

@@ -40,8 +40,14 @@ const Header = () => {
   return (
     <>
       <Container maxwidth="md" id="home">
-        <Box minHeight={["80vh", "100vh"]} paddingX={["1rem", "2rem"]}>
-          <Stack direction={"column"} marginTop={"5rem"}>
+        <Box
+          minHeight={["80vh", "100vh"]}
+          paddingX={["1rem", "2rem"]}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Stack direction={"column"}>
             <Typography
               variant="h1"
               fontSize={"1.2rem"}
@@ -66,13 +72,15 @@ const Header = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .pauseFor(5)
-                    .typeString("<strong>Frontend Developer</strong>")
+                    .typeString("<strong>Fullstack Web Developer</strong>")
                     .pauseFor(300)
-                    .deleteChars(22)
-                    .typeString("<strong>I Build Things For The Web</strong>")
+                    .deleteChars(23)
+                    .typeString(
+                      "<strong>Crafting Digital Experiences </strong>"
+                    )
                     .pauseFor(700)
                     .typeString(
-                      '<strong> and <span style="color: orange;">Mobile.</span></strong>'
+                      '<strong> <span style="color: orange;">for the Modern Web.</span></strong>'
                     )
                     .pauseFor(1000)
                     .start();
